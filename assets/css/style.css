@@ -2,13 +2,12 @@ body{
     margin: 0px;
 }
 header{
-    /* position: absolute; */
     width: 100%;
-    height: 100%;
     left: 0px;
     top: 0px;
     background: #502221;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
+    padding: 0px;
 }
 #contact-us{
     display: flex; 
@@ -51,6 +50,14 @@ header{
     color: #2e6e34;
     transform: scale(1.1);
 }
+.fa-caret-down{
+    color: #215025;
+    font-size: 20px;
+    margin-left: 10px;
+}
+/* #categories::file-selector-button {
+    display: none;
+} */
 nav>ul>li{
     display: inline-block;
     padding: 6px 40px 6px 40px;
@@ -70,7 +77,7 @@ nav>ul>li>a{
 nav>ul>li:hover, #login>ul>li:hover {
     background: #215025;
 }
-nav>ul>li>a:hover, #login>ul>li>a:hover{
+nav>ul>li>a:hover, #login>ul>li>a:hover, .fa-caret-down:hover{
     color: #FBF6F8;
 }
 #login a{
@@ -95,6 +102,7 @@ nav>ul>li>a:hover, #login>ul>li>a:hover{
 #header{
     display: flex;
     justify-content: space-between;
+    padding-bottom: 0px;
 }
 #search{
     display: flex;
@@ -118,22 +126,12 @@ nav>ul>li>a:hover, #login>ul>li>a:hover{
     margin-left: -5px;
 } 
 #books-background{
-    /* background-image: url('/assets/images/wp8772458-book-spring-wallpapers.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    width: 100%;
-    height: 100%; */
-    /* background-color: #502221;
-    width: 100 */
-    background-image: linear-gradient(to right, #502221 , rgb(177, 60, 60));
-    width: 100%;
-    height: 200%;
-    left: calc(50% - 1433px/2 - 1.5px);
-    top: 219px;
-    bottom: 1815px;
-    border: 1px solid rgba(0, 0, 0, 0.89);
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-position: center center;
+    background-image: url('/assets/images/jaredd-craig-HH4WBGNyltc-unsplash\ \(4\).jpg');
+    background-color: aquamarine;
+    height: 20em;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    filter: contrast(130%);
 
 }
 #books-background h1{
@@ -143,9 +141,15 @@ font-style: normal;
 font-weight: 400;
 font-size: 5em;
 line-height: 100px;
-
 color: #FBF6F8;
+text-align: center;
 }
+
+#books-background h1:hover{
+    transform: scale(1.1);
+    color: #215025
+}
+
 main{
     margin: auto;
     width: 80%;
@@ -155,12 +159,13 @@ main{
 font-family: 'Quicksand';
 font-weight: 700;
 font-size: 45px;
-text-decoration-line: underline;
 color: #215025;
+text-align: left;
 }
 .category h1:hover{
     /* transform: scale(1.1); */
     color: #2e6e34;
+    text-decoration-line: underline;
 }
 .books-list{
     display: flex;
@@ -231,6 +236,19 @@ color: #215025;
     left: 35px;
     top: 420px;
 }
+.more{
+    font-family: 'Quicksand';
+    font-weight: 700;
+    font-size: 20px;
+    color: #215025;
+    text-align: right;
+}
+.more p{
+    cursor: pointer;
+}
+.more:hover{
+    text-decoration-line: underline;
+}
 .details-card>form{
     display: block;
     background: #FBF6F8;
@@ -258,11 +276,10 @@ color: #215025;
     border-radius: 0.5em;
     margin-left: 0.5em;
     margin-top: 1em;
-
+    border: 1px solid #101010;
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
     border-radius: 14px;
-    align-content: center;
 }
 .book-details-columns label{
     padding-bottom: 1em;
@@ -270,6 +287,10 @@ color: #215025;
     font-family: 'QuickSand';
     font-weight: 500;
 }
+input::file-selector-button {
+    display: none;
+  }
+
 .details-card>form>button{
     display: block;
     width: 10em;
@@ -282,6 +303,11 @@ color: #215025;
     align-content: center;
     margin-left: 2.5em;
     background: #FFFFFF;
+    border: 1px solid #101010;
+}
+.details-card>form>button:hover{
+    background: #215025;
+    color: #FBF6F8;
 }
 
 footer{
@@ -299,14 +325,20 @@ footer{
     font-size: 65px;
     line-height: 0px;
     color: #215025;
-    margin-left: 20px;
-    /* padding-top: 1em; */
+    margin-left: -4.5em;
+    
 }
 
 .footer{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding: 1em 1em 1em 1em;
+}
+#links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: 5em;
 }
 .footer h3{
     font-family: 'QuickSand';
@@ -322,6 +354,7 @@ footer{
     font-size: 15px;
     color: #FBF6F8;
     margin: 1em 1em 1em 0em;
+    padding: 0em;
 }
 .footer a{
     text-decoration: none;
