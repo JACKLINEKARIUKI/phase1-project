@@ -1,7 +1,7 @@
 header{
-    position: absolute;
-    width: 1433px;
-    height: 219px;
+    /* position: absolute; */
+    width: 100%;
+    height: 100%;
     left: 0px;
     top: 0px;
     background: #502221;
@@ -121,29 +121,120 @@ nav>ul>li>a:hover, #login>ul>li>a:hover{
     position: absolute;
     width: 100%;
     height: 100%; */
-    
+    /* background-color: #502221;
+    width: 100 */
     background-image: linear-gradient(to right, #502221 , rgb(177, 60, 60));
     width: 100%;
     height: 200%;
+    left: calc(50% - 1433px/2 - 1.5px);
+    top: 219px;
+    bottom: 1815px;
     border: 1px solid rgba(0, 0, 0, 0.89);
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 }
 #books-background h1{
-    position: absolute;
+    /* position: absolute; */
 width: 1312px;
 height: 111px;
 left: 82px;
 top: 254px;
-
+/* align-items: center; */
 font-family: 'Qwigley';
 font-style: normal;
 font-weight: 400;
-font-size: 128px;
+font-size: 100px;
 line-height: 100px;
 
 color: #FBF6F8;
 }
+main{
+    margin: auto;
+    width: 80%;
+    height:auto;
+}
+.category h1, .upload h1{
+font-family: 'Quicksand';
+font-weight: 700;
+font-size: 45px;
+text-decoration-line: underline;
+color: #215025;
+}
+.category h1:hover{
+    /* transform: scale(1.1); */
+    color: #2e6e34;
+}
+.books-list{
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+}
+.categories img{
+    width: 16em;
+    height: 22em;
+    margin: 10px;
+    border-radius: 10px 10px 0px 0px;
+    padding-left: 0px;
+    margin-left: 0px;
+}
+.book{
+    width: 16em;
+    height: auto;
+    background: #FBF6F8;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.17);
+    padding-bottom: 10px;
+}
+.book h3{
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 20px;
+    color:#212121;
+    margin: -10px 0px 0px 0px;
+}
+.book h4{
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 14px;
+    color: #6A6969;
+    margin: 5px 0px 15px 0px;
+}
+.book:hover{
+    transform: scale(1.1);
+}
+.book-detail {
+    padding: 10px 16px;
+}
+
+.fa-heart {
+    color:#f0350b;
+    cursor: pointer
+}
+
+.fa-heart-o {
+    cursor: pointer;
+    font-family: 'FontAwesome';
+    font-style: normal;
+    font-weight: normal;
+    /* color: #f0350b; */
+}
+
+.hide{
+    display: none;
+    font-size: 12px;
+    font-family: 'Inter';
+}
+
+.fa-heart-o:hover + .hide {
+    display: inline-block;
+    opacity: 0.5;
+    position: absolute;
+    left: 35px;
+    top: 420px;
+
+}
+
 
 
 
