@@ -1,3 +1,6 @@
+body{
+    margin: 0px;
+}
 header{
     /* position: absolute; */
     width: 100%;
@@ -37,7 +40,7 @@ header{
     margin-left: 20px;
     padding-top: 0px;
 }
-#logo h4{
+#logo h4, #footer-logo h4{
     font-family: 'QuickSand';
     font-style: normal;
     font-weight: 600;
@@ -113,7 +116,7 @@ nav>ul>li>a:hover, #login>ul>li>a:hover{
     background: #215025;
     color: #FBF6F8;
     margin-left: -5px;
-}
+} 
 #books-background{
     /* background-image: url('/assets/images/wp8772458-book-spring-wallpapers.png');
     background-repeat: no-repeat;
@@ -134,16 +137,11 @@ nav>ul>li>a:hover, #login>ul>li>a:hover{
 
 }
 #books-background h1{
-    /* position: absolute; */
-width: 1312px;
-height: 111px;
-left: 82px;
-top: 254px;
-/* align-items: center; */
+width: 100%;
 font-family: 'Qwigley';
 font-style: normal;
 font-weight: 400;
-font-size: 100px;
+font-size: 5em;
 line-height: 100px;
 
 color: #FBF6F8;
@@ -153,7 +151,7 @@ main{
     width: 80%;
     height:auto;
 }
-.category h1, .upload h1{
+.category h1, .upload-book h1{
 font-family: 'Quicksand';
 font-weight: 700;
 font-size: 45px;
@@ -232,8 +230,123 @@ color: #215025;
     position: absolute;
     left: 35px;
     top: 420px;
-
 }
+.details-card>form{
+    display: block;
+    background: #FBF6F8;
+    box-shadow: 9px 11px 33px 3px rgba(0, 0, 0, 0.15);
+    padding-bottom: 3em;
+}
+.book-details-columns{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+    padding: 1em 0em 1em 0em;
+}
+
+.book-details{
+    /* position: relative; */
+    display: block;
+    padding: 1em 1em 1em 1em;
+    margin:1em;
+}
+.book-details-columns input{
+    display: block;
+    padding-top: 1em;
+    width: 30em;
+    height: 2.5em;
+    border-radius: 0.5em;
+    margin-left: 0.5em;
+    margin-top: 1em;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 14px;
+    align-content: center;
+}
+.book-details-columns label{
+    padding-bottom: 1em;
+    margin-bottom: 2em;
+    font-family: 'QuickSand';
+    font-weight: 500;
+}
+.details-card>form>button{
+    display: block;
+    width: 10em;
+    height: 2.5em;
+    border-radius: 0.5em;
+    margin-left: 0.5em;
+    font-family: 'QuickSand';
+    font-weight: 700;
+    font-size: 15px;
+    align-content: center;
+    margin-left: 2.5em;
+    background: #FFFFFF;
+}
+
+footer{
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    background: #502221;
+    margin-bottom: 0px;
+    margin-top: 3em;
+}
+#footer-logo{
+    font-family: 'Qwigley';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 65px;
+    line-height: 0px;
+    color: #215025;
+    margin-left: 20px;
+    /* padding-top: 1em; */
+}
+
+.footer{
+    display: flex;
+    justify-content: space-around;
+    padding: 1em 1em 1em 1em;
+}
+.footer h3{
+    font-family: 'QuickSand';
+    font-weight: 700;
+    font-size: 20px;
+    color: #FBF6F8;
+    margin: 1em 1em 0em 1em;
+}
+.footer li{
+    list-style: none;
+    font-family: 'QuickSand';
+    font-weight: 550;
+    font-size: 15px;
+    color: #FBF6F8;
+    margin: 1em 1em 1em 0em;
+}
+.footer a{
+    text-decoration: none;
+    color: #FBF6F8;
+}
+.footer a:hover{
+    color: #2e6e34;
+}
+.follow-us li{
+    display: inline-block;
+}
+footer h6{
+    font-family: 'QuickSand';
+    font-weight: 550;
+    font-size: 15px;
+    color: #FBF6F8;
+    margin: 1em 1em 0em 1em;
+    text-align: center
+}
+
+
+
+
+
+
 
 
 
