@@ -1,0 +1,151 @@
+header{
+    position: absolute;
+    width: 1433px;
+    height: 219px;
+    left: 0px;
+    top: 0px;
+    background: #502221;
+    margin-bottom: 20px;
+}
+#contact-us{
+    display: flex; 
+    justify-content: right;
+    color: #fff;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+#contact-us a{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 3px;
+    margin-right: 20px;
+}
+#contact-us a:hover{
+    color: #2e6e34;
+    text-decoration: underline;
+}
+#logo{
+    font-family: 'Qwigley';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 65px;
+    line-height: 0px;
+    color: #215025;
+    margin-top: -50px;
+    margin-left: 20px;
+    padding-top: 0px;
+}
+#logo h4{
+    font-family: 'QuickSand';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: -30px;
+}
+#logo:hover{
+    color: #2e6e34;
+    transform: scale(1.1);
+}
+nav>ul>li{
+    display: inline-block;
+    padding: 6px 40px 6px 40px;
+    margin: 10px;
+    background: #FBF6F8;
+    color: #215025;
+    font-family: 'QuickSand';
+    font-size: 20px;
+    font-weight: 400;
+    list-style: none;
+    border-radius: 8px;
+}
+nav>ul>li>a{
+    text-decoration: none;
+    color: #215025;
+}
+nav>ul>li:hover, #login>ul>li:hover {
+    background: #215025;
+}
+nav>ul>li>a:hover, #login>ul>li>a:hover{
+    color: #FBF6F8;
+}
+#login a{
+    text-decoration: none;
+    color: #215025;
+}
+#login a:hover{
+    color: #FBF6F8;
+}
+#login>ul>li{
+    display: inline-block;
+    padding: 6px 30px 6px 30px;
+    margin: 10px;
+    background: #FBF6F8;
+    color: #215025;
+    font-family: 'QuickSand';
+    font-size: 20px;
+    font-weight: 400;
+    list-style: none;
+    border-radius: 8px;
+}
+#header{
+    display: flex;
+    justify-content: space-between;
+}
+#search{
+    display: flex;
+    justify-content: right;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+#search input{
+    width: 300px;
+    height: 30px;
+    border: 1px solid #215025;
+    padding: 0px 10px 0px 10px;
+}
+#search button{
+    width: 35px;
+    height: 30px;
+    padding: 0px 10px 0px 10px;
+    border: 1px solid #215025;
+    background: #215025;
+    color: #FBF6F8;
+    margin-left: -5px;
+}
+#books-background{
+    /* background-image: url('/assets/images/wp8772458-book-spring-wallpapers.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 100%;
+    height: 100%; */
+    
+    background-image: linear-gradient(to right, #502221 , rgb(177, 60, 60));
+    width: 100%;
+    height: 200%;
+    border: 1px solid rgba(0, 0, 0, 0.89);
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+#books-background h1{
+    position: absolute;
+width: 1312px;
+height: 111px;
+left: 82px;
+top: 254px;
+
+font-family: 'Qwigley';
+font-style: normal;
+font-weight: 400;
+font-size: 128px;
+line-height: 100px;
+
+color: #FBF6F8;
+}
+
+
+
+
+
