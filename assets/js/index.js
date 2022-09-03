@@ -58,34 +58,34 @@ function selectMenu(books){
     })
 }
 
-// function fetchFantasyBooks(){
-//     for (let i = 0; i < books.fantasy.length; i++) {
-//         fetch(`https://openlibrary.org/api/books?bibkeys=ISBN:${books.fantasy[i]}&jscmd=data&format=json`)
-//         .then(response => response.json())
-//         .then(data => {
-//             const bookCard = document.createElement('div');
-//             bookCard.className = 'book-card';
-//             bookCard.innerHTML = `
-//             <img src="${data[`ISBN:${books.fantasy[i]}`].cover.large}">
-//             <div class="book-detail">
-//                 <h3>${data[`ISBN:${books.fantasy[i]}`].title}</h3>
-//                 <h4>${data[`ISBN:${books.fantasy[i]}`].authors[0].name}</h4>
-//                 <div>
-//                 <i class="fa fa-heart-o" aria-hidden="true"></i>
-//                 <p class="hide">Add to wish list</p>
-//                 </div>
-//             </div> `;
-//             const categoryName = document.createElement('div');
-//             categoryName.className = 'category';
-//             categoryName.innerHTML = `<h1>click event</h1>`;
-//             categoryName.appendChild(bookCard);
-//             const categories = document.querySelector('.categories');
-//             categories.appendChild(categoryName);
-//             console.log(categoryName);
-//         })
-//         .catch(err => console.log(err));
-//     }
-// }
+function fetchFantasyBooks(){
+    for (let i = 0; i < books.fantasy.length; i++) {
+        fetch(`https://openlibrary.org/api/books?bibkeys=ISBN:${books.fantasy[i]}&jscmd=data&format=json`)
+        .then(response => response.json())
+        .then(data => {
+            const bookCard = document.createElement('div');
+            bookCard.className = 'book-card';
+            bookCard.innerHTML = `
+            <img src="${data[`ISBN:${books.fantasy[i]}`].cover.large}">
+            <div class="book-detail">
+                <h3>${data[`ISBN:${books.fantasy[i]}`].title}</h3>
+                <h4>${data[`ISBN:${books.fantasy[i]}`].authors[0].name}</h4>
+                <div>
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                <p class="hide">Add to wish list</p>
+                </div>
+            </div> `;
+            const categoryName = document.createElement('div');
+            categoryName.className = 'category';
+            categoryName.innerHTML = `<h1>click event</h1>`;
+            categoryName.appendChild(bookCard);
+            const categories = document.querySelector('.categories');
+            categories.appendChild(categoryName);
+            console.log(categoryName);
+        })
+        .catch(err => console.log(err));
+    }
+}
 
 // // function populateBookCard(data){
 // //     console.log('hello');
