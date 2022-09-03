@@ -21,42 +21,42 @@ const books = {
         9781443431255, 9781844138548, 9781410452580, 0425130266, 9780754014362],
 }
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     categoriesMenu();
-//     selectMenu();
+document.addEventListener('DOMContentLoaded', function() {
+    categoriesMenu();
+    selectMenu();
     
 
-//     // fetchFantasyBooks(books);
-// });
+    // fetchFantasyBooks(books);
+});
 
-// function categoriesMenu(){
-//     const categories = document.getElementById('categories');
-//     const list = document.querySelector('.categories-list');
-//     categories.addEventListener('click',() => {
-//        list.style.display = 'block';
-//     })
-// }
+function categoriesMenu(){
+    const categories = document.getElementById('categories');
+    const list = document.querySelector('.categories-list');
+    categories.addEventListener('click',() => {
+       list.style.display = 'block';
+    })
+}
 
 
-// function selectMenu(books){
-//     const listItem = document.querySelectorAll('.categories-list li');
-//     const list = document.querySelector('.categories-list');
-//     listItem.forEach(item => {
-//         item.addEventListener('click', (e) => {
-//             list.style.display = 'none';
-//             if (e.target.textContent === 'Fantasy') {
-//                 fetchFantasyBooks(books);
-//             } else if (e.target.textContent === 'Horror') {
-//                 fetchHorrorBooks(books);
-//             } else if (e.target.textContent === 'Literature') {
-//                 fetchLiteratureBooks(books);
-//             } else if (e.target.textContent === 'Trending') {
-//                 fetchTrendingBooks(books);
-//             }
-//         })
+function selectMenu(books){
+    const listItem = document.querySelectorAll('.categories-list li');
+    const list = document.querySelector('.categories-list');
+    listItem.forEach(item => {
+        item.addEventListener('click', (e) => {
+            list.style.display = 'none';
+            if (e.target.textContent === 'Fantasy') {
+                fetchFantasyBooks(books);
+            } else if (e.target.textContent === 'Horror') {
+                fetchHorrorBooks(books);
+            } else if (e.target.textContent === 'Literature') {
+                fetchLiteratureBooks(books);
+            } else if (e.target.textContent === 'Trending') {
+                fetchTrendingBooks(books);
+            }
+        })
 
-//     })
-// }
+    })
+}
 
 // function fetchFantasyBooks(){
 //     for (let i = 0; i < books.fantasy.length; i++) {
