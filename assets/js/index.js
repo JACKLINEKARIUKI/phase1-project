@@ -25,8 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
     categoriesMenu();
     selectMenu();
     
-
-    // fetchFantasyBooks(books);
 });
 
 function categoriesMenu(){
@@ -59,6 +57,16 @@ function selectMenu(books){
 }
 
 function fetchFantasyBooks(){
+    const main = document.querySelector('main');
+    main.innerHTML = `<div class="categories"></div>`;
+    const categoryName = document.createElement('div');
+    categoryName.className = 'category';
+    categoryName.innerHTML = `<h1>Fantasy</h1>`;
+    const booksList = document.createElement('div');
+    booksList.className = 'books-list';
+    categoryName.appendChild(booksList);
+    main.appendChild(categoryName);
+
     for (let i = 0; i < books.fantasy.length; i++) {
         fetch(`https://openlibrary.org/api/books?bibkeys=ISBN:${books.fantasy[i]}&jscmd=data&format=json`)
         .then(response => response.json())
@@ -75,95 +83,122 @@ function fetchFantasyBooks(){
                 <p class="hide">Add to wish list</p>
                 </div>
             </div> `;
-            const categoryName = document.createElement('div');
-            categoryName.className = 'category';
-            categoryName.innerHTML = `<h1>click event</h1>`;
-            categoryName.appendChild(bookCard);
-            const categories = document.querySelector('.categories');
-            categories.appendChild(categoryName);
-            console.log(categoryName);
+
+            booksList.appendChild(bookCard);
+            
         })
         .catch(err => console.log(err));
     }
 }
 
-// // function populateBookCard(data){
-// //     console.log('hello');
-// //         const bookCard = document.createElement('div');
-// //         bookCard.className = 'book-card';
-// //         bookCard.innerHTML = `
-// //         <img src="${data[`ISBN:${books.fantasy[i]}`].cover.large}">
-// //         <div class="book-detail">
-// //             <h3>${data[`ISBN:${books.fantasy[i]}`].title}</h3>
-// //             <h4>${data[`ISBN:${books.fantasy[i]}`].authors[0].name}</h4>
-// //             <div>
-// //             <i class="fa fa-heart-o" aria-hidden="true"></i>
-// //             <p class="hide">Add to wish list</p>
-// //             </div>
-// //         </div> `;
-// //         const categoryName = document.createElement('div');
-// //         categoryName.className = 'category';
-// //         categoryName.innerHTML = `<h1>click event</h1>`;
-// //         categoryName.appendChild(bookCard);
-// //         const categories = document.querySelector('.categories');
-// //         categories.appendChild(categoryName);
-// //         console.log(categoryName);
+
+
+
+function fetchHorrorBooks(books){
+    main.innerHTML = `<div class="categories"></div>`;
+    const categoryName = document.createElement('div');
+    categoryName.className = 'category';
+    categoryName.innerHTML = `<h1>Horror</h1>`;
+    const booksList = document.createElement('div');
+    booksList.className = 'books-list';
+    categoryName.appendChild(booksList);
+    main.appendChild(categoryName);
+
+    for (let i = 0; i < books.fantasy.length; i++) {
+        fetch(`https://openlibrary.org/api/books?bibkeys=ISBN:${books.horror[i]}&jscmd=data&format=json`)
+        .then(response => response.json())
+        .then(data => {
+            const bookCard = document.createElement('div');
+            bookCard.className = 'book-card';
+            bookCard.innerHTML = `
+            <img src="${data[`ISBN:${books.fantasy[i]}`].cover.large}">
+            <div class="book-detail">
+                <h3>${data[`ISBN:${books.fantasy[i]}`].title}</h3>
+                <h4>${data[`ISBN:${books.fantasy[i]}`].authors[0].name}</h4>
+                <div>
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                <p class="hide">Add to wish list</p>
+                </div>
+            </div> `;
+
+            booksList.appendChild(bookCard);
+            
+        })
+        .catch(err => console.log(err));
+    }
+}
+
+function fetchLiteratureBooks(books){
+    const main = document.querySelector('main');
+    main.innerHTML = `<div class="categories"></div>`;
+    const categoryName = document.createElement('div');
+    categoryName.className = 'category';
+    categoryName.innerHTML = `<h1>Literature</h1>`;
+    const booksList = document.createElement('div');
+    booksList.className = 'books-list';
+    categoryName.appendChild(booksList);
+    main.appendChild(categoryName);
+
+    for (let i = 0; i < books.fantasy.length; i++) {
+        fetch(`https://openlibrary.org/api/books?bibkeys=ISBN:${books.literature[i]}&jscmd=data&format=json`)
+        .then(response => response.json())
+        .then(data => {
+            const bookCard = document.createElement('div');
+            bookCard.className = 'book-card';
+            bookCard.innerHTML = `
+            <img src="${data[`ISBN:${books.fantasy[i]}`].cover.large}">
+            <div class="book-detail">
+                <h3>${data[`ISBN:${books.fantasy[i]}`].title}</h3>
+                <h4>${data[`ISBN:${books.fantasy[i]}`].authors[0].name}</h4>
+                <div>
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                <p class="hide">Add to wish list</p>
+                </div>
+            </div> `;
+
+            booksList.appendChild(bookCard);
+            
+        })
+        .catch(err => console.log(err));
+    }
     
-// // }
+};
 
+function fetchTrendingBooks(books){
+    const main = document.querySelector('main');
+    main.innerHTML = `<div class="categories"></div>`;
+    const categoryName = document.createElement('div');
+    categoryName.className = 'category';
+    categoryName.innerHTML = `<h1>Trending</h1>`;
+    const booksList = document.createElement('div');
+    booksList.className = 'books-list';
+    categoryName.appendChild(booksList);
+    main.appendChild(categoryName);
 
+    for (let i = 0; i < books.fantasy.length; i++) {
+        fetch(`https://openlibrary.org/api/books?bibkeys=ISBN:${books.trending[i]}&jscmd=data&format=json`)
+        .then(response => response.json())
+        .then(data => {
+            const bookCard = document.createElement('div');
+            bookCard.className = 'book-card';
+            bookCard.innerHTML = `
+            <img src="${data[`ISBN:${books.fantasy[i]}`].cover.large}">
+            <div class="book-detail">
+                <h3>${data[`ISBN:${books.fantasy[i]}`].title}</h3>
+                <h4>${data[`ISBN:${books.fantasy[i]}`].authors[0].name}</h4>
+                <div>
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                <p class="hide">Add to wish list</p>
+                </div>
+            </div> `;
 
-
-// function fetchHorrorBooks(books){
-//     for (let i = 0; i < books.horror.length; i++) {
-//         fetch(`https://openlibrary.org/api/books?bibkeys=ISBN:${books.horror[i]}&jscmd=data&format=json`)
-//         .then(response => response.json())
-//         .then(data => {
-//             console.log(data);
-//             // createBook(data);
-//         }).catch(err => console.log(err));
-//         // console.log(books[key][i]);
-//     }
-// }
-
-// function fetchLiteratureBooks(books){
-//     for (let i = 0; i < booksliterature.length; i++) {
-//         fetch(`https://openlibrary.org/api/books?bibkeys=ISBN:${books.literature[i]}&jscmd=data&format=json`)
-//         .then(response => response.json())
-//         .then(data => {
-//             console.log(data);
-//             // createBook(data);
-//         }).catch(err => console.log(err));
+            booksList.appendChild(bookCard);
+            
+        })
+        .catch(err => console.log(err));
+    }
+};
         
-//     }
-// }
-
-// function fetchTrendingBooks(books){
-//     for (let i = 0; i < books.trending.length; i++) {
-//         fetch(`https://openlibrary.org/api/books?bibkeys=ISBN:${books.trending[i]}&jscmd=data&format=json`)
-//         .then(response => response.json())
-//         .then(data => {
-//             console.log(data);
-//             // createBook(data);
-//         }).catch(err => console.log(err));
-        
-//     }
-// }
 
 
 
-
-// function createBooksList(books){
-//     fetchFantasyBooks(books);
-//     // for (let key in books) {
-//     //     for (let i = 0; i < books[key].length; i++) {
-//     //         fetch(`https://openlibrary.org/api/books?bibkeys=ISBN:${books[key][i]}&jscmd=data&format=json`)
-//     //         .then(response => response.json())
-//     //         .then(data => {
-//     //             console.log(data);
-//     //             // createBook(data);
-//     //         }).catch(err => console.log(err));
-//     //         // console.log(books[key][i]);
-//     //     }
-//     // }
-// }
