@@ -21,6 +21,9 @@ const books = {
         9781443431255, 9781844138548, 9781410452580, 0425130266, 9780754014362],
 }
 
+// const bookGenre = Object.keys(books);
+
+
 document.addEventListener('DOMContentLoaded', function() {
     categoriesMenu();
     selectMenu();
@@ -72,6 +75,7 @@ function fetchFantasyBooks(){
         fetch(`https://openlibrary.org/api/books?bibkeys=ISBN:${books.fantasy[i]}&jscmd=data&format=json`)
         .then(response => response.json())
         .then(data => {
+
             const bookCard = document.createElement('div');
             bookCard.className = 'book-card';
             bookCard.innerHTML = `
@@ -79,9 +83,9 @@ function fetchFantasyBooks(){
             <div class="book-detail">
                 <h3>${data[`ISBN:${books.fantasy[i]}`].title}</h3>
                 <h4>${data[`ISBN:${books.fantasy[i]}`].authors[0].name}</h4>
-                <div>
-                <i class="fa fa-heart-o" aria-hidden="true"></i>
-                <p class="hide">Add to wish list</p>
+                <div class="wishlist-details">
+                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                    <p class="hide">Add to wish list</p>
                 </div>
             </div> `;
 
@@ -91,6 +95,32 @@ function fetchFantasyBooks(){
         .catch(err => console.log(err));
     }
 }
+
+// function populateBookCard(){
+//     // console.log(genre.length);
+//     for (let i = 0; i < books.fantasy.length; i++) {
+//         fetch(`https://openlibrary.org/api/books?bibkeys=ISBN:${books.fantasy[i]}&jscmd=data&format=json`)
+//         .then(response => response.json())
+//         .then(data => {
+//             const bookCard = document.createElement('div');
+//             bookCard.className = 'book-card';
+//             bookCard.innerHTML = `
+//             <img src="${data[`ISBN:${books.fantasy[i]}`].cover.large}">
+//             <div class="book-detail">
+//                 <h3>${data[`ISBN:${books.fantasy[i]}`].title}</h3>
+//                 <h4>${data[`ISBN:${books.fantasy[i]}`].authors[0].name}</h4>
+//                 <div>
+//                 <i class="fa fa-heart-o" aria-hidden="true"></i>
+//                 <p class="hide">Add to wish list</p>
+//                 </div>
+//             </div> `;
+
+//             booksList.appendChild(bookCard);
+            
+//         })
+//         .catch(err => console.log(err));
+//     }
+// }
 
 
 
@@ -110,7 +140,6 @@ function fetchHorrorBooks(){
         fetch(`https://openlibrary.org/api/books?bibkeys=ISBN:${books.horror[i]}&jscmd=data&format=json`)
         .then(response => response.json())
         .then(data => {
-            console.log(data);
             const bookCard = document.createElement('div');
             bookCard.className = 'book-card';
             bookCard.innerHTML = `
@@ -118,9 +147,9 @@ function fetchHorrorBooks(){
             <div class="book-detail">
                 <h3>${data[`ISBN:${books.horror[i]}`].title}</h3>
                 <h4>${data[`ISBN:${books.horror[i]}`].authors[0].name}</h4>
-                <div>
-                <i class="fa fa-heart-o" aria-hidden="true"></i>
-                <p class="hide">Add to wish list</p>
+                <div class="wishlist-details">
+                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                    <p class="hide">Add to wish list</p>
                 </div>
             </div> `;
 
@@ -153,9 +182,9 @@ function fetchLiteratureBooks(){
             <div class="book-detail">
                 <h3>${data[`ISBN:${books.literature[i]}`].title}</h3>
                 <h4>${data[`ISBN:${books.literature[i]}`].authors[0].name}</h4>
-                <div>
-                <i class="fa fa-heart-o" aria-hidden="true"></i>
-                <p class="hide">Add to wish list</p>
+                <div class="wishlist-details">
+                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                    <p class="hide">Add to wish list</p>
                 </div>
             </div> `;
 
@@ -190,9 +219,9 @@ function fetchThrillerBooks(){
             <div class="book-detail">
                 <h3>${data[`ISBN:${books.thriller[i]}`].title}</h3>
                 <h4>${data[`ISBN:${books.thriller[i]}`].authors[0].name}</h4>
-                <div>
-                <i class="fa fa-heart-o" aria-hidden="true"></i>
-                <p class="hide">Add to wish list</p>
+                <div class="wishlist-details">
+                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                    <p class="hide">Add to wish list</p>
                 </div>
             </div> `;
 
@@ -202,9 +231,11 @@ function fetchThrillerBooks(){
         .catch(err => console.log(err));
     }
 };
-        
+
+
 function addToWishlist (){
     const addWish = document.querySelectorAll('.wishlist-details i');
+    console.log(addWish);
     addWish.forEach(addWish => {
         addWish.addEventListener('click', () => {
             if (addWish.className === 'fa fa-heart-o'){
@@ -215,7 +246,6 @@ function addToWishlist (){
                 addWish.className = 'fa fa-heart-o';
                 addWish.nextElementSibling.className = 'hide';
             }
-    
             });
         }
         )};
