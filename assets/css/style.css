@@ -151,7 +151,7 @@ nav>ul>li>a:hover, #login>ul>li>a:hover, .fa-caret-down:hover, .categories-list 
 } 
 #books-background{
     background-position: center center;
-    background-image: url('/assets/images/jaredd-craig-HH4WBGNyltc-unsplash\ \(4\).jpg');
+    background-image: url('/assets/images/header-image.jpg');
     background-color: aquamarine;
     height: 20em;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
