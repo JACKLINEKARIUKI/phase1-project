@@ -111,6 +111,7 @@ function uploadBook(){
             </ul>
         <div>`
         const uploadDetailsCard = document.querySelector('.uploaded-book');
-        uploadDetailsCard.appendChild(uploaded);    
+        uploadDetailsCard.appendChild(uploaded);   
+        e.target.reset();
     })
 }
