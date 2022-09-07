@@ -172,20 +172,20 @@
                         <div class="book-details-column1">
                             <div class="book-details">
                                 <label for="title">Title </label>
-                                <input type="text" id="title" name="title" placeholder="Title">
+                                <div class="input-container"><input type="text" id="title" name="title" placeholder="Title"></div>
                             </div>
                             <div class="book-details">
                                 <Label for="author">Author </Label>
-                                <input type="text" id="author" name="author" placeholder="Name">
+                                <div class="input-container"><input type="text" id="author" name="author" placeholder="Name"></div>
                             </div>
                         </div>
                         <div class="book-details-column1">
                             <div class="book-details">
-                                <Label for="book-cover">Book Cover </Label>
+                                <Label for="book-cover">Click here to add book cover image</Label>
                                 <input type="file" id="cover" name="cover" placeholder=".jpg, .jpeg, .png">
                             </div>
                             <div class="book-details">
-                                <Label for="book">Book </Label>
+                                <label for="book">Click here to add book</label>
                                 <input type="file" id="book" name="book" placeholder=".epub, .pdf">
                             </div>
                         </div>
@@ -193,6 +193,10 @@
                     <button type="submit" id="upload">Upload</button>
 
                 </form>
+                <div class="uploaded-book">
+                    <h3> Uploaded books</h3>
+                    <p>By uploading your book, you agree to our <a href="#">Terms and Conditions</a></p>
+                </div>
             </div>
            
         </div>
