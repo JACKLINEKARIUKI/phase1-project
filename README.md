@@ -21,12 +21,13 @@ This is a book store website where one can easily view the genre of books they w
 * website link.
 
 # Link
-Here is the link to the website ()
+Here is the link to the [website] (https://jacklinekariuki.github.io/phase1-project/)
 
 # Technology Used
 * HTML -To build the page contents.
 * CSS - To style the page contents.
 * JavaScript - to make the page interactive
+* [Open Library API](https://openlibrary.org/developers/api)
 
 # Licence
 
